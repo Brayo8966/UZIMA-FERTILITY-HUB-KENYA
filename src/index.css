@@ -22,7 +22,7 @@ a:hover {
   color: #535bf2;
 }
 
-/* ✅ FIXED: removed flex layout that was breaking everything */
+/* BODY FIX */
 body {
   margin: 0;
   min-width: 320px;
@@ -54,7 +54,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* ✅ GLOBAL SAFETY FIX (prevents image overflow) */
+/* GLOBAL SAFETY FIX */
 * {
   box-sizing: border-box;
 }
@@ -65,31 +65,54 @@ img {
   display: block;
 }
 
-/* ✅ HERO FIX (this is what was breaking layout) */
+/* HERO FIX (IMPORTANT CHANGES HERE) */
+.hero {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .hero-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
   padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-left,
 .hero-right {
   flex: 1;
+  min-width: 0; /* FIX for mobile overflow */
 }
 
 /* IMAGE SAFETY */
 .hero-right img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
   height: auto;
+  margin: 0 auto;
 }
 
-/* 📱 MOBILE FIX */
+/* STRIP GRID (was missing) */
+.hero-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.strip-card {
+  padding: 12px;
+}
+
+/* 📱 MOBILE FIX (FULL CONTROL) */
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
 
   .hero-left {
@@ -100,8 +123,17 @@ img {
     order: 2;
     margin-top: 20px;
   }
+
+  .hero-right img {
+    max-width: 90%;
+  }
+
+  .hero-strip {
+    grid-template-columns: 1fr;
+  }
 }
 
+/* LIGHT MODE */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
