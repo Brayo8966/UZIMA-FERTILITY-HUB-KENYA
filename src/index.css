@@ -54,7 +54,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* GLOBAL SAFETY FIX */
+/* GLOBAL SAFETY */
 * {
   box-sizing: border-box;
 }
@@ -65,7 +65,7 @@ img {
   display: block;
 }
 
-/* HERO FIX (IMPORTANT CHANGES HERE) */
+/* HERO SECTION */
 .hero {
   width: 100%;
   overflow-x: hidden;
@@ -84,10 +84,10 @@ img {
 .hero-left,
 .hero-right {
   flex: 1;
-  min-width: 0; /* FIX for mobile overflow */
+  min-width: 0;
 }
 
-/* IMAGE SAFETY */
+/* HERO IMAGE */
 .hero-right img {
   width: 100%;
   max-width: 500px;
@@ -95,7 +95,7 @@ img {
   margin: 0 auto;
 }
 
-/* STRIP GRID (was missing) */
+/* FEATURE STRIP */
 .hero-strip {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -107,25 +107,44 @@ img {
   padding: 12px;
 }
 
-/* 📱 MOBILE FIX (FULL CONTROL) */
+/* 📱 MOBILE FIX (UPDATED: SIDE BY SIDE) */
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
+    flex-direction: row; /* keep side-by-side */
+    gap: 15px;
+    padding: 15px;
+    align-items: center;
   }
 
   .hero-left {
-    order: 1;
+    flex: 1.3;
   }
 
   .hero-right {
-    order: 2;
-    margin-top: 20px;
+    flex: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-right img {
-    max-width: 90%;
+    width: 100%;
+    max-width: 180px; /* shrink image on mobile */
+  }
+
+  .hero-left h1 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  .hero-points p {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .hero-strip {
