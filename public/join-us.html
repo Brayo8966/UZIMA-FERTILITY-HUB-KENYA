@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Join Us | Uzima Fertility</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #0f766e;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .file-note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    button {
+      background: #0f766e;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0b5e58;
+    }
+
+    .status {
+      font-weight: 600;
+      color: #0f766e;
+      margin-bottom: 10px;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+
+    .closed {
+      display: none;
+      color: red;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Join Us</h1>
+
+    <p>
+      Please fill in the application form and upload your documents.
+    </p>
+
+    <p class="status" id="status"></p>
+
+    <div class="closed" id="closedMsg"></div>
+
+    <form
+      id="form"
+      action="https://formsubmit.co/uzimafertility@gmail.com"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+
+      <div>
+        <label>Full Name</label>
+        <input type="text" name="Full Name" required />
+      </div>
+
+      <div>
+        <label>Email</label>
+        <input type="email" name="Email" required />
+      </div>
+
+      <div>
+        <label>Phone</label>
+        <input type="tel" name="Phone" required />
+      </div>
+
+      <div>
+        <label>Brief Description</label>
+        <textarea name="Description" required></textarea>
+      </div>
+
+      <div>
+        <label>Upload CV</label>
+        <input type="file" name="CV" accept=".pdf,.doc,.docx" required />
+      </div>
+
+      <div>
+        <label>Other Documents</label>
+        <input type="file" name="Documents" multiple accept=".pdf,.doc,.docx,.jpg,.png" />
+      </div>
+
+      <input type="hidden" name="_subject" value="New Application Submission" />
+      <input type="hidden" name="_captcha" value="false" />
+
+      <!-- OPTIONAL: remove if you don’t have thank-you page -->
+      <!--
+      <input type="hidden" name="_next" value="https://uzimafertility.co.ke/thank-you.html" />
+      -->
+
+      <div class="error" id="error"></div>
+
+      <button type="submit">Submit Application</button>
+
+    </form>
+
+  </div>
+
+  <script>
+    const form = document.getElementById("form");
+    const status = document.getElementById("status");
+    const closedMsg = document.getElementById("closedMsg");
+
+    const openDate = new Date("2026-05-10T08:00:00");
+    const closeDate = new Date("2026-06-30T23:59:59");
+    const now = new Date();
+
+    if (now < openDate) {
+      form.style.display = "none";
+      closedMsg.style.display = "block";
+      closedMsg.innerText = "Applications are not yet open.";
+    } else if (now > closeDate) {
+      form.style.display = "none";
+      closedMsg.style.display = "block";
+      closedMsg.innerText = "Applications are closed.";
+    } else {
+      status.innerText = "Applications are open.";
+    }
+  </script>
+
+</body>
+</html>
