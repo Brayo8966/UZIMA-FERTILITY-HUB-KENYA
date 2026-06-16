@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us | Uzima Fertility Hub</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .banner {
+      background: #0f766e;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      color: #0f766e;
+      margin-top: 0;
+    }
+
+    h2 {
+      color: #0f766e;
+      margin-top: 25px;
+    }
+
+    h3 {
+      color: #333;
+      margin-top: 25px;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    ul {
+      color: #555;
+      line-height: 1.7;
+      padding-left: 22px;
+    }
+
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background: #0f766e;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0b5e58;
+    }
+
+    .status {
+      font-weight: bold;
+      color: #0f766e;
+      margin: 15px 0;
+    }
+
+    .closed {
+      display: none;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .closed h2 {
+      color: #c62828;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <div id="jobAdvert">
+
+
+<div class="banner">
+  🚀 WE ARE HIRING – Applications close on 30th June 2026
+</div>
+
+<h1>Join Uzima Fertility Hub</h1>
+
+<h2>Position: Fertility Community Outreach & Marketing Personnel</h2>
+
+<p>
+  Uzima Fertility Hub is seeking passionate, aggressive, and
+  results-oriented Community Outreach & Marketing Personnel to help expand
+  access to fertility and reproductive health services across Kenya.
+</p>
+
+<p>
+  The role involves community engagement, hospital and doctor networking,
+  corporate outreach, awareness campaigns, patient education, lead generation,
+  and promoting fertility services including fertility screening, semen
+  analysis, IUI, IVF referrals, hormonal testing, and reproductive wellness programs.
+</p>
+
+<p>
+  Applicants should possess strong communication skills, confidence when
+  interacting with patients and healthcare professionals, and the ability
+  to build trust within communities.
+</p>
+
+<h3>Preferred Backgrounds</h3>
+
+<ul>
+  <li>Medical Laboratory Technology</li>
+  <li>Nursing</li>
+  <li>Pharmacy</li>
+  <li>Clinical Medicine</li>
+  <li>Public Health</li>
+  <li>Pharmaceutical / Medical Representation</li>
+  <li>Sales & Marketing (Healthcare-related preferred)</li>
+</ul>
+
+<p>
+  Laboratory technologists, nurses, pharmacists, medical representatives,
+  and healthcare-oriented marketers are highly encouraged to apply.
+</p>
+
+<h3>Key Responsibilities</h3>
+
+<ul>
+  <li>Conduct fertility awareness and outreach campaigns</li>
+  <li>Build referral networks with hospitals, clinics, pharmacies and doctors</li>
+  <li>Identify and follow up potential fertility clients</li>
+  <li>Organize community education activities and activations</li>
+  <li>Promote Uzima Fertility Hub services physically and digitally</li>
+  <li>Maintain outreach reports and weekly performance targets</li>
+  <li>Represent the brand professionally in the community</li>
+</ul>
+
+<h3>Requirements</h3>
+
+<ul>
+  <li>Diploma or Degree in a relevant field</li>
+  <li>Good communication and interpersonal skills</li>
+  <li>Ability to work independently and meet targets</li>
+  <li>Basic social media and smartphone literacy</li>
+  <li>Passion for reproductive health and patient support</li>
+  <li>Previous healthcare marketing experience is an added advantage</li>
+</ul>
+
+<p>
+  Interested applicants should complete the application form below and upload
+  their CV together with any relevant supporting documents.
+</p>
+
+
+  </div>
+
+  <p class="status" id="status"></p>
+
+  <div class="closed" id="closedMsg"></div>
+
+  <form
+    id="form"
+    action="https://formsubmit.co/uzimafertility@gmail.com"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+
+
+<div>
+  <label for="name">Full Name</label>
+  <input id="name" type="text" name="Full Name" required>
+</div>
+
+<div>
+  <label for="email">Email Address</label>
+  <input id="email" type="email" name="Email" required>
+</div>
+
+<div>
+  <label for="phone">Phone Number</label>
+  <input id="phone" type="tel" name="Phone" required>
+</div>
+
+<div>
+  <label for="description">Brief Description</label>
+  <textarea id="description" name="Description" required></textarea>
+</div>
+
+<div>
+  <label for="cv">Upload CV</label>
+  <input id="cv" type="file" name="CV" accept=".pdf,.doc,.docx" required>
+</div>
+
+<div>
+  <label for="documents">Other Supporting Documents</label>
+  <input id="documents" type="file" name="Documents" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+</div>
+
+<input type="hidden" name="_subject" value="New Job Application Submission">
+<input type="hidden" name="_captcha" value="false">
+
+<button type="submit">Submit Application</button>
+
+
+  </form>
+
+</div>
+
+<script>
+  const form = document.getElementById("form");
+  const status = document.getElementById("status");
+  const closedMsg = document.getElementById("closedMsg");
+  const jobAdvert = document.getElementById("jobAdvert");
+
+  const openDate = new Date("2026-06-16T00:00:00");
+  const closeDate = new Date("2026-06-30T23:59:59");
+  const now = new Date();
+
+  if (now < openDate) {
+    form.style.display = "none";
+    jobAdvert.style.display = "none";
+    closedMsg.style.display = "block";
+    closedMsg.innerHTML = `
+      <h2>Applications Not Yet Open</h2>
+      <p>Please check again when recruitment opens.</p>
+    `;
+  } else if (now > closeDate) {
+    form.style.display = "none";
+    jobAdvert.style.display = "none";
+    closedMsg.style.display = "block";
+    closedMsg.innerHTML = `
+      <h2>Applications Closed</h2>
+      <p>Thank you for your interest in joining Uzima Fertility Hub.</p>
+      <p>Please check again later for future opportunities.</p>
+    `;
+  } else {
+    status.textContent = "Applications are currently open.";
+  }
+</script>
+
+</body>
+</html>
