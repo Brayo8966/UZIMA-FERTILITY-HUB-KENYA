@@ -5,7 +5,7 @@ export default function Contact() {
     <section className="contact" id="contact" data-aos="fade-up">
       <div className="container">
         <h2>Contact Us</h2>
-        <p>For referrals or inquiries, reach out using the details below.</p>
+        <p>For fertility consultations, referrals or inquiries in Nairobi and Kisii, reach out using the details below.</p>
 
         <div className="contact-info">
           <a href="mailto:support@uzimafertility.co.ke">
@@ -18,6 +18,7 @@ export default function Contact() {
 
         <div className="contact-location">
           <h3>Location</h3>
+          <p>Nairobi: Upperhill, Fortis Suites.</p>
           <p>Kisii Town, Elimu Center Building, 2nd Floor.</p>
         </div>
 

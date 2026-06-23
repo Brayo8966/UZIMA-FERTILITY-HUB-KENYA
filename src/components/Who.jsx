@@ -27,8 +27,8 @@ export default function Who() {
           </p>
 
           <p>
-            Accessible nationwide via online consultations and physically at our
-            Kisii hub and trusted partner doctors in Nairobi.
+            Accessible nationwide via online consultations and physically through our
+            Nairobi, Upperhill, Fortis Suites location, Kisii hub and trusted partner doctors.
           </p>
 
         </div>
